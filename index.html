@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css"/>
+        <link rel="stylesheet" href="/bower_components/material-design-lite/material.min.css">
+        <title>Arduino connectivity test</title>
+    </head>
+        <body>
+        <header></header>
+        <div class="main-container mdl-color-text--grey-600">
+            <div class="control-container">
+                <h4 class="control-container__title">RGB LED</h4>
+                <div class="control-container__content">
+                    <section class="power mdl-shadow--2dp">
+                        <h5>LED Turning On/Off</h5>
+                        <button class="power__on mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--blue mdl-color-text--white">On</button>
+                        <button class="power__off mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--blue mdl-color-text--white">Off</button>
+                    </section>
+                    <section class="blink mdl-shadow--2dp">
+                        <h5>LED Blinking</h5>
+                        <button class="blink__submit mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--blue mdl-color-text--white">Send</button>
+                        <!-- <input class="blink__input" type="text" placeholder="Add value in milliseconds"/> -->
+                        <div class="blink__input-container">
+                            <form action="#">
+                                <div class="mdl-textfield mdl-js-textfield">
+                                    <input class="blink__input mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample2">
+                                    <label class="mdl-textfield__label" for="sample2">milliseconds</label>
+                                    <span class="mdl-textfield__error">Input is not a number!</span>
+                                </div>
+                            </form>
+                        </div>
+                    </section>
+                    <section class="color mdl-shadow--2dp">
+                        <h5>Change Color</h5>
+                        <input type="color" class="color__input">
+                        <button class="color__submit mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--blue mdl-color-text--white">Change</button>
+                    </section>
+                    <section class="intensity mdl-shadow--2dp">
+                        <h5>LED Intensity)</h5>
+                        <button class="intensity__submit mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--blue mdl-color-text--white">Send</button>
+                        <!-- <input class="intensity__input" type="text" placeholder="Add value 0-100"/> -->
+                        <div class="intensity__input-container">
+                            <form action="#">
+                                <div class="mdl-textfield mdl-js-textfield">
+                                    <input class="intensity__input mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample2">
+                                    <label class="mdl-textfield__label" for="sample2">Add value 0-100</label>
+                                    <span class="mdl-textfield__error">Input is not a number!</span>
+                                </div>
+                            </form>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <footer></footer>
+        <script src="/bower_components/material-design-lite/material.min.js"></script>
+        <script type="text/javascript" src="controlPanel.js"></script>
+        <script src="/socket.io/socket.io.js"></script>
+        <script>
+            var socket = io.connect('http://localhost');
+        </script>
+    </body>
+</html>

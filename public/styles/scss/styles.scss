@@ -1,0 +1,31 @@
+@import '_layout';
+@import '_variables';
+
+.main-container {
+    background-color: #edeefb;
+    padding: 30px;
+}
+
+.control-container {
+    &__title {
+        text-align: center;
+    }
+}
+
+.blink__input-container,
+.intensity__input-container {
+    margin-top: -16px;
+    display: inline-block;
+    width: 50%;
+    margin-left: 10px;
+}
+
+.power,
+.blink,
+.color,
+.intensity {
+    background-color: $color-white;
+    padding: 10px;
+    height: 150px;
+    box-sizing: border-box;
+}
