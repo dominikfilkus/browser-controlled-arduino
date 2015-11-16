@@ -10,6 +10,7 @@ The API and proper hardware blueprints are here: https://github.com/rwaldron/joh
 
 The project uses the following third party libraries:
 
+* express.js (http://expressjs.com/) - for enhance our nodejs application
 * johnny-five (http://johnny-five.io/) - for using arduino javascript controlling API
 * socket.io (http://socket.io/) - for using web sockets to establish communication between back end and front end
 * susy (http://susy.oddbird.net/) for creating a layout easily
