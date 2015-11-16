@@ -20,7 +20,7 @@ The project uses the following third party libraries:
 
 ### Install
 
-You need to have nodeJS installed in your system and have a properly configured arduino with RGB LED.
+You need to have nodeJS installed on your system and have a properly configured arduino with RGB LED.
 You also need to have Ruby and Grunt installed on your system.
 
 * gem install sass
