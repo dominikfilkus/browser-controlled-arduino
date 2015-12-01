@@ -39,7 +39,7 @@
                         <button class="color__submit mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--blue mdl-color-text--white">Change</button>
                     </section>
                     <section class="intensity mdl-shadow--2dp">
-                        <h5>LED Intensity)</h5>
+                        <h5>LED Intensity</h5>
                         <button class="intensity__submit mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--blue mdl-color-text--white">Send</button>
                         <!-- <input class="intensity__input" type="text" placeholder="Add value 0-100"/> -->
                         <div class="intensity__input-container">
@@ -54,13 +54,23 @@
                     </section>
                 </div>
             </div>
+            <div class="control-container">
+                <h4 class="control-container__title">Temperature</h4>
+                <div class="control-container__content">
+                    <section class="temperature mdl-shadow--2dp">
+                        <h5>Celsius</h5>
+                        <input class="temperature__value--celsius" type="text" value=""/>
+                    </section>
+                    <section class="temperature mdl-shadow--2dp">
+                        <h5>Fahrenheit</h5>
+                        <input class="temperature__value--fahrenheit" type="text" value=""/>
+                    </section>
+                </div>
+            </div>
         </div>
         <footer></footer>
         <script src="/bower_components/material-design-lite/material.min.js"></script>
-        <script type="text/javascript" src="controlPanel.js"></script>
         <script src="/socket.io/socket.io.js"></script>
-        <script>
-            var socket = io.connect('http://localhost');
-        </script>
+        <script type="text/javascript" src="controlPanel.js"></script>
     </body>
 </html>
