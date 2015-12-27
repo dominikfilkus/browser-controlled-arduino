@@ -26,7 +26,8 @@
 .blink,
 .color,
 .intensity,
-.temperature {
+.temperature,
+.servo {
     background-color: $color-white;
     padding: 10px;
     height: 150px;

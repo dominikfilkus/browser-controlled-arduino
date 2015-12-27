@@ -21,6 +21,22 @@
         socket.emit('intensity', parseInt(document.querySelector('.intensity__input').value, 10));
     });
 
+    document.querySelector('.servo__move--forward').addEventListener('mousedown', function() {
+        socket.emit('servo_forward');
+    });
+
+    document.querySelector('.servo__move--forward').addEventListener('mouseup', function() {
+        socket.emit('servo_stop');
+    });
+
+    document.querySelector('.servo__move--backward').addEventListener('mousedown', function() {
+        socket.emit('servo_backward');
+    });
+
+    document.querySelector('.servo__move--backward').addEventListener('mouseup', function() {
+        socket.emit('servo_stop');
+    });
+
     socket.on('temperature', function(data) {
         document.querySelector('.temperature__value--celsius').value = data.celsius.toFixed(2);
         document.querySelector('.temperature__value--fahrenheit').value = data.fahrenheit.toFixed(2);

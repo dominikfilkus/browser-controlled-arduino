@@ -8,7 +8,8 @@ global.io = require('socket.io')(server);
 
 var boardModule = require('./src/boardModule.js'),
     rgbLedModule = require('./src/rgbLedModule'),
-    thermoMeterModule = require('./src/thermoMeterModule');
+    thermoMeterModule = require('./src/thermoMeterModule'),
+    servoModule = require('./src/servoModule');
 
 server.listen(80);
 
@@ -23,5 +24,6 @@ app.get('/', function(req, res) {
 boardModule.initBoard().then(function() {
     rgbLedModule.initRGBLed();
     thermoMeterModule.initThermoMeter();
+    servoModule.initServo();
 });
 
